@@ -7,6 +7,7 @@ public class Practice {
 			for(int j = 0; j < 0; j++) {
 				int point = 8;
 				
+				
 				if(j >= point-i) {
 					System.out.println("*");
 				}else {

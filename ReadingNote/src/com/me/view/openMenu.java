@@ -15,6 +15,7 @@ public class openMenu {
 			System.out.println("2. 작성글 보기");
 			System.out.println("3. 작성글 검색하기");
 			System.out.println("4. 책 보기");
+			System.out.println("5. 책 검색");
 			System.out.println("9. 프로그램 종료");
 			System.out.println("메뉴 입력 :");
 			int menu = sc.nextInt();
@@ -28,6 +29,8 @@ public class openMenu {
 			case 3:
 				break;
 			case 4:
+				break;
+			case 5:
 				break;
 			case 9: 
 				return;

@@ -53,6 +53,7 @@ public class openMenu {
 		while (true) {
 			if (yn.equalsIgnoreCase("Y")) {
 				nc.writeNote();
+				break;
 
 			} else if (yn.equalsIgnoreCase("N")) {
 				System.out.println("메인 메뉴로 돌아갑니다.");

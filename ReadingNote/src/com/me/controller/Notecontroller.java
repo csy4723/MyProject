@@ -2,13 +2,14 @@ package com.me.controller;
 
 import java.util.ArrayList;
 import java.util.Scanner;
+
 import com.me.model.vo.Note;
 import com.me.view.openMenu;
 
 public class Notecontroller {
 	Scanner sc = new Scanner(System.in);
 	StringBuffer sb = new StringBuffer();
-	ArrayList<StringBuffer> note = new ArrayList<StringBuffer>();
+	ArrayList<Note> note = new ArrayList<>();
 	Note n = new Note();
 	openMenu om = new openMenu();
 
@@ -36,12 +37,15 @@ public class Notecontroller {
 			
 			String id = om.ID;
 			
-			n = new Note(title, sb, null, id );
+			note.add(new Note(title, sb, null, id ));// 달력 만들기
 			
 		}
 		
 		
 		
 	}
+	
+	
+	
 
 }

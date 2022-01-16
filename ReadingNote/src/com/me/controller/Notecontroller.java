@@ -2,14 +2,15 @@ package com.me.controller;
 
 import java.util.ArrayList;
 import java.util.Scanner;
-
 import com.me.model.vo.Note;
+import com.me.view.openMenu;
 
 public class Notecontroller {
 	Scanner sc = new Scanner(System.in);
 	StringBuffer sb = new StringBuffer();
 	ArrayList<StringBuffer> note = new ArrayList<StringBuffer>();
 	Note n = new Note();
+	openMenu om = new openMenu();
 
 	public Notecontroller() {
 		// TODO Auto-generated constructor stub
@@ -33,10 +34,14 @@ public class Notecontroller {
 				break;
 			}
 			
+			String id = om.ID;
 			
-//			note = new Note(title, sb, null, str)
+			n = new Note(title, sb, null, id );
 			
 		}
+		
+		
+		
 	}
 
 }

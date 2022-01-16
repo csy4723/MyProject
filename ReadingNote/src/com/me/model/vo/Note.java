@@ -4,7 +4,7 @@ import java.util.Calendar;
 
 public class Note {
 	private String title;
-	private String content; 
+	private StringBuffer content; 
 	private Calendar date;
 	private String userId;
 	
@@ -12,7 +12,7 @@ public class Note {
 		// TODO Auto-generated constructor stub
 	}
 
-	public Note(String title, String content, Calendar date, String userId) {
+	public Note(String title, StringBuffer content, Calendar date, String userId) {
 		super();
 		this.title = title;
 		this.content = content;
@@ -28,11 +28,11 @@ public class Note {
 		this.title = title;
 	}
 
-	public String getContent() {
+	public StringBuffer getContent() {
 		return content;
 	}
 
-	public void setContent(String content) {
+	public void setContent(StringBuffer content) {
 		this.content = content;
 	}
 

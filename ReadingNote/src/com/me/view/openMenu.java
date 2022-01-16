@@ -3,12 +3,24 @@ package com.me.view;
 import java.util.Scanner;
 
 import com.me.controller.Notecontroller;
+import com.me.model.vo.Note;
 
 public class openMenu {
 	Scanner sc = new Scanner(System.in);
 	Notecontroller nc = new Notecontroller();
+	public static String ID;
+	
+	public openMenu() {
+		// TODO Auto-generated constructor stub
+	}
 
 	public void mainMenu() {
+		
+		//로그인
+		System.out.println("아이디 :");
+		System.out.println("비밀번호 :");
+		ID = sc.nextLine();
+		String pwd = sc.nextLine();
 
 		while (true) {
 
@@ -46,7 +58,7 @@ public class openMenu {
 		}
 	}
 
-	private void writeNote() {
+	public void writeNote() {
 		System.out.println("글을 작성하시겠습니까? (y/n)");
 		String yn = sc.nextLine().toUpperCase();
 

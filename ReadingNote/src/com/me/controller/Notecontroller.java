@@ -12,7 +12,7 @@ public class Notecontroller {
 	StringBuffer sb = new StringBuffer();
 	ArrayList<Note> note = new ArrayList<>();
 	Note n = new Note();
-//	openMenu om = new openMenu();
+	openMenu om;
 
 	public Notecontroller() {
 		// TODO Auto-generated constructor stub
@@ -36,10 +36,10 @@ public class Notecontroller {
 				break;
 			}
 			
-//			String id = om.ID;
+			String id = om.ID;
 			Calendar date = date();
 			
-//			note.add(new Note(title, sb, date, id ));// 리스트에 담아줌 
+			note.add(new Note(title, sb, date, id ));// 리스트에 담아줌 
 			
 			System.out.println(note.get(0).toString());
 			

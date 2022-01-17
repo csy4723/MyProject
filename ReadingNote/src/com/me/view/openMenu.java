@@ -10,9 +10,7 @@ public class openMenu {
 	Notecontroller nc = new Notecontroller();
 	public static String ID;
 	
-	public openMenu() {
-		// TODO Auto-generated constructor stub
-	}
+	
 
 	public void mainMenu() {
 		
@@ -69,8 +67,10 @@ public class openMenu {
 
 			} else if (yn.equalsIgnoreCase("N")) {
 				System.out.println("메인 메뉴로 돌아갑니다.");
+				break;
 			} else {
 				System.out.println("잘못 입력했습니다. 다시 입력해주세요.");
+				break;
 			}
 		}
 

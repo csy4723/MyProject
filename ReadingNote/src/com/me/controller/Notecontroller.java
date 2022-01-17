@@ -7,6 +7,7 @@ import java.util.Scanner;
 import com.me.model.vo.Note;
 import com.me.view.openMenu;
 
+
 public class Notecontroller {
 	Scanner sc = new Scanner(System.in);
 	StringBuffer sb = new StringBuffer();

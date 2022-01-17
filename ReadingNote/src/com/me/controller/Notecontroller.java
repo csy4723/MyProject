@@ -1,6 +1,7 @@
 package com.me.controller;
 
 import java.util.ArrayList;
+import java.util.Calendar;
 import java.util.Scanner;
 
 import com.me.model.vo.Note;
@@ -11,7 +12,7 @@ public class Notecontroller {
 	StringBuffer sb = new StringBuffer();
 	ArrayList<Note> note = new ArrayList<>();
 	Note n = new Note();
-	openMenu om = new openMenu();
+//	openMenu om = new openMenu();
 
 	public Notecontroller() {
 		// TODO Auto-generated constructor stub
@@ -35,13 +36,23 @@ public class Notecontroller {
 				break;
 			}
 			
-			String id = om.ID;
+//			String id = om.ID;
+			Calendar date = date();
 			
-			note.add(new Note(title, sb, null, id ));// 달력 만들기
+//			note.add(new Note(title, sb, date, id ));// 리스트에 담아줌 
+			
+			System.out.println(note.get(0).toString());
 			
 		}
 		
 		
+		
+	}
+	
+	public Calendar date() {
+		Calendar d = Calendar.getInstance();
+		
+		return d;
 		
 	}
 	

@@ -1,5 +1,6 @@
 package com.me.model.vo;
 
+import java.text.SimpleDateFormat;
 import java.util.Calendar;
 
 public class Note {
@@ -50,6 +51,14 @@ public class Note {
 
 	public void setUserId(String userId) {
 		this.userId = userId;
+	}
+
+	@Override
+	public String toString() {
+		SimpleDateFormat f = new SimpleDateFormat("yyyy년 MM월 dd일");
+		f.format(date);
+		
+		return "제목 : "+ title + "\n 내용 : " + content + "\n 작성일 : " + date + " 작성자 : " + userId ;
 	}
 	
 	

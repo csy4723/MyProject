@@ -64,7 +64,7 @@ public class openMenu {
 
 		while (true) {
 			if (yn.equalsIgnoreCase("Y")) {
-				nc.writeNote();
+			nc.writeNote();
 				break;
 
 			} else if (yn.equalsIgnoreCase("N")) {

@@ -2,6 +2,7 @@ package com.me.controller;
 
 import java.util.ArrayList;
 import java.util.Calendar;
+import java.util.Date;
 import java.util.Scanner;
 
 import com.me.model.vo.Note;
@@ -39,11 +40,11 @@ public class Notecontroller {
 			String id = openMenu.ID;
 			
 			System.out.println(id);
-//			Calendar date = date();
+		Date date = date().getTime();
 			
-		//	note.add(new Note(title, sb, date, id ));// 리스트에 담아줌 
+			note.add(new Note(title, sb, date, id ));// 리스트에 담아줌 
 			
-		//	System.out.println(note.get(0).toString());
+			System.out.println(note.get(0).toString());
 			
 		}
 		
@@ -51,14 +52,15 @@ public class Notecontroller {
 		
 	}
 	
-//	public Calendar date() {
-//		Calendar d = Calendar.getInstance();
-//		
-//		return d;
-//		
-//	}
-//	
-//	
+	public Calendar date() {
+		Calendar d = Calendar.getInstance();
+		
+		
+		return d;
+		
+	}
+	
+	
 	
 
 }

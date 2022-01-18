@@ -2,22 +2,23 @@ package com.me.model.vo;
 
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
+import java.util.Date;
 
 public class Note {
 	private String title;
 	private StringBuffer content; 
-	private Calendar date;
+	private Date date;
 	private String userId;
 	
 	public Note() {
 		// TODO Auto-generated constructor stub
 	}
 
-	public Note(String title, StringBuffer content, Calendar date, String userId) {
+	public Note(String title, StringBuffer content, Date date2, String userId) {
 		super();
 		this.title = title;
 		this.content = content;
-		this.date = date;
+		this.date = date2;
 		this.userId = userId;
 	}
 
@@ -37,11 +38,11 @@ public class Note {
 		this.content = content;
 	}
 
-	public Calendar getDate() {
+	public Date getDate() {
 		return date;
 	}
 
-	public void setDate(Calendar date) {
+	public void setDate(Date date) {
 		this.date = date;
 	}
 

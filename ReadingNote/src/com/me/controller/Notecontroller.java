@@ -1,13 +1,9 @@
 package com.me.controller;
 
-import java.io.BufferedReader;
-import java.io.BufferedWriter;
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
-import java.io.FileReader;
-import java.io.FileWriter;
 import java.io.IOException;
 import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;
@@ -84,6 +80,7 @@ public class Notecontroller {
 
 	}
 
+	
 	public void readNote() {
 
 		File f = new File("Reading Note.ser");
@@ -133,6 +130,41 @@ public class Notecontroller {
 		System.out.println("검색할 글의 단어를 입력하세요.");
 		String str = sc.nextLine();
 
+		int i = 0;//제목 일치 결과
+		int j = 0;//내용 일치 결과
+
+		for (Note n : note) {
+
+			if (n.getTitle().contains(str)) {
+
+				if (i == 0) {
+					System.out.println("**제목으로 검색한 결과**");// 한번만 나오게 하고 싶어서
+				}
+
+				System.out.println(n.toString());
+				i++;
+			}else if(n.getContent().contains(str)) {
+				
+				if(j == 0) {
+					System.out.println("**내용으로 검색한 결과**");// 한번만 나오게 하고 싶어서
+					
+				}
+				
+				System.out.println(n.toString());
+				j++;
+				
+			}
+			
+		}
+		
+		if(i+j == 0) {
+			System.out.println("검색단어와 일치하는 정보가 없습니다.");
+			return;
+		}
+		
+		System.out.println("총 "+(i+j)+" 개의 결과가 검색되었습니다.");
+		
+
 	}
 
 	public void searchNoteIndex() {
@@ -145,11 +177,11 @@ public class Notecontroller {
 
 			index--;
 
-			if(index > note.size()) {
+			if (index > note.size()) {
 				System.out.println("잘못 눌렀습니다.");
-			}else {
+			} else {
 				String result = note.get(index).toString();
-				
+
 			}
 
 			System.out.println("1. 검색 계속 하기 \n2.해당 글 수정\n3.해당 글 삭제");
@@ -165,7 +197,7 @@ public class Notecontroller {
 			case 3:
 				deleteNote(index);
 				return;
-			case 9: 
+			case 9:
 				System.out.println("메인메뉴로 돌아갑니다.");
 				return;
 			default:
@@ -217,7 +249,7 @@ public class Notecontroller {
 				}
 
 			}
-			
+
 			String content = sb.toString();
 
 			note.get(index).setContent(content);

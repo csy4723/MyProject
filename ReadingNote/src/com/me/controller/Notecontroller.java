@@ -40,7 +40,7 @@ public class Notecontroller {
 			String id = openMenu.ID;
 			
 			System.out.println(id);
-		Date date = date().getTime();
+		Calendar date = Calendar.getInstance();
 			
 			note.add(new Note(title, sb, date, id ));// 리스트에 담아줌 
 			
@@ -52,13 +52,7 @@ public class Notecontroller {
 		
 	}
 	
-	public Calendar date() {
-		Calendar d = Calendar.getInstance();
-		
-		
-		return d;
-		
-	}
+
 	
 	
 	

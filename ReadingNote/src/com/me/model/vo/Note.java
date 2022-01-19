@@ -7,14 +7,14 @@ import java.util.Date;
 public class Note {
 	private String title;
 	private StringBuffer content; 
-	private Date date;
+	private Calendar date;
 	private String userId;
 	
 	public Note() {
 		// TODO Auto-generated constructor stub
 	}
 
-	public Note(String title, StringBuffer content, Date date2, String userId) {
+	public Note(String title, StringBuffer content, Calendar date2, String userId) {
 		super();
 		this.title = title;
 		this.content = content;
@@ -38,11 +38,11 @@ public class Note {
 		this.content = content;
 	}
 
-	public Date getDate() {
+	public Calendar getDate() {
 		return date;
 	}
 
-	public void setDate(Date date) {
+	public void setDate(Calendar date) {
 		this.date = date;
 	}
 
@@ -57,9 +57,9 @@ public class Note {
 	@Override
 	public String toString() {
 		SimpleDateFormat f = new SimpleDateFormat("yyyy년 MM월 dd일");
-		f.format(date);
+		String d = f.format(date.getTime());
 		
-		return "제목 : "+ title + "\n 내용 : " + content + "\n 작성일 : " + date + " 작성자 : " + userId ;
+		return "제목 : "+ title + "\n 내용 : " + content + "\n 작성일 : " + d + " 작성자 : " + userId ;
 	}
 	
 	

@@ -8,12 +8,10 @@ public class openMenu {
 	Scanner sc = new Scanner(System.in);
 	Notecontroller nc = new Notecontroller();
 	public static String ID;
-	
-	
 
 	public void mainMenu() {
-		
-		//로그인
+
+		// 로그인
 		System.out.println("아이디 :");
 		System.out.println("비밀번호 :");
 		ID = sc.nextLine();
@@ -21,12 +19,12 @@ public class openMenu {
 		nc.readNote();
 
 		while (true) {
-			
+
 			System.out.println("===메뉴===");
 			System.out.println();
 			System.out.println("1. 독서 노트 작성하기");
 			System.out.println("2. 작성글 보기");
-			System.out.println("3. 작성글 검색하기");
+			System.out.println("3. 작성글 검색하기(수정/삭제)");
 			System.out.println("4. 책 보기");
 			System.out.println("5. 책 검색");
 			System.out.println("9. 프로그램 종료");
@@ -61,10 +59,24 @@ public class openMenu {
 	}
 
 	private void serchNote() {
-		// TODO Auto-generated method stub
-		
-	}
+		System.out.println("1. 인덱스로 검색\n2.단어로 검색");
+		int num = sc.nextInt();
 
+		switch (num) {
+		case 1:
+			nc.searchNoteIndex();
+			break;
+		case 2:
+
+			nc.searchNote();
+
+			break;
+		default:
+			System.out.println("잘못입력했습니다");
+			break;
+		}
+
+	}
 
 	public void writeNote() {
 		System.out.println("글을 작성하시겠습니까? (y/n)");
@@ -72,7 +84,7 @@ public class openMenu {
 
 		while (true) {
 			if (yn.equalsIgnoreCase("Y")) {
-			nc.writeNote();
+				nc.writeNote();
 				break;
 
 			} else if (yn.equalsIgnoreCase("N")) {
@@ -85,6 +97,5 @@ public class openMenu {
 		}
 
 	}
-	
 
 }

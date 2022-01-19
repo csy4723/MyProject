@@ -3,9 +3,14 @@ package com.me.controller;
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
 import java.io.File;
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
 import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
+import java.io.ObjectInputStream;
+import java.io.ObjectOutputStream;
 import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.Scanner;
@@ -60,26 +65,53 @@ public class Notecontroller {
 	
 	public void saveNote() {
 		
-		File ex = new File("Reading Note.txt");
+		File ex = new File("Reading Note.ser");
 		
 		if(ex.exists()) {
 			ex.delete();
 		}
 		
-		File f = new File("Reading Note.txt");
+		File f = new File("Reading Note.ser");
 		
-		try {
-			BufferedWriter bw = new BufferedWriter(new FileWriter(f.getName()));
-		
+		try (ObjectOutputStream oos = new ObjectOutputStream(new FileOutputStream(f.getName()));){
 			
-		
+				oos.writeObject(note);
+			
 		} catch (IOException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
+		}finally {
+			
 		}
 		
 		
+	}
+	
+	
+	public void readNote() {
 		
+		File f = new File("Reading Note.ser");
+		
+		try (ObjectInputStream ois = new ObjectInputStream(new FileInputStream(f.getName()))){
+			
+			note = (ArrayList<Note>)ois.readObject();
+			
+			
+			
+			for(int i = 0; i< note.size(); i++) {
+				note.get(i).toString();
+			}
+			
+		} catch (FileNotFoundException e) {
+			System.out.println("파일이 존재하지 않습니다.");
+			e.printStackTrace();
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} catch (ClassNotFoundException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 		
 		
 	}

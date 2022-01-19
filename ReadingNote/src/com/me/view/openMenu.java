@@ -3,7 +3,6 @@ package com.me.view;
 import java.util.Scanner;
 
 import com.me.controller.Notecontroller;
-import com.me.model.vo.Note;
 
 public class openMenu {
 	Scanner sc = new Scanner(System.in);
@@ -19,9 +18,10 @@ public class openMenu {
 		System.out.println("비밀번호 :");
 		ID = sc.nextLine();
 		String pwd = sc.nextLine();
+		nc.readNote();
 
 		while (true) {
-
+			
 			System.out.println("===메뉴===");
 			System.out.println();
 			System.out.println("1. 독서 노트 작성하기");
@@ -39,7 +39,7 @@ public class openMenu {
 				writeNote();
 				break;
 			case 2:
-				viewNote();
+				nc.viewNote();
 				break;
 			case 3:
 				serchNote();
@@ -49,6 +49,7 @@ public class openMenu {
 			case 5:
 				break;
 			case 9:
+				nc.saveNote();
 				System.out.println("프로그램을 종료합니다.");
 				return;
 			default:
@@ -64,10 +65,6 @@ public class openMenu {
 		
 	}
 
-	private void viewNote() {
-		// TODO Auto-generated method stub
-		
-	}
 
 	public void writeNote() {
 		System.out.println("글을 작성하시겠습니까? (y/n)");
@@ -88,5 +85,6 @@ public class openMenu {
 		}
 
 	}
+	
 
 }

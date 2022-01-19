@@ -122,7 +122,18 @@ public class Notecontroller {
 			System.out.println(n.toString());
 			System.out.println("===========================");
 			i++;
+			
+			System.out.println("다음 글을 보려면 Y를 누르세요");
+			String yn = sc.nextLine();
+			if(yn.equalsIgnoreCase("Y")) {
+				continue;
+			}else {
+				return;
+			}
+			
 		}
+		
+		System.out.println("다음 글이 없습니다 \n메인 메뉴로 돌아갑니다.");
 		
 		
 	}

@@ -80,7 +80,7 @@ public class openMenu {
 				break;
 			} else {
 				System.out.println("잘못 입력했습니다. 다시 입력해주세요.");
-				break;
+				yn = sc.nextLine();
 			}
 		}
 

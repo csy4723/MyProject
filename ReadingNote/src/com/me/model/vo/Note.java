@@ -65,7 +65,7 @@ public class Note implements Serializable{
 		SimpleDateFormat f = new SimpleDateFormat("yyyy년 MM월 dd일");
 		String d = f.format(date.getTime());
 		
-		return "\n제목 : "+ title + "\n 내용 : " + content + "\n 작성일 : " + d + " 작성자 : " + userId ;
+		return "\n제목 : "+ title + "\n내용 : " + content + "\n작성일 : " + d + "\n작성자 : " + userId ;
 	}
 	
 	

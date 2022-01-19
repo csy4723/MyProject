@@ -39,14 +39,17 @@ public class openMenu {
 				writeNote();
 				break;
 			case 2:
+				viewNote();
 				break;
 			case 3:
+				serchNote();
 				break;
 			case 4:
 				break;
 			case 5:
 				break;
 			case 9:
+				System.out.println("프로그램을 종료합니다.");
 				return;
 			default:
 				System.out.println("잘못 입력했습니다.");
@@ -54,6 +57,16 @@ public class openMenu {
 			}
 
 		}
+	}
+
+	private void serchNote() {
+		// TODO Auto-generated method stub
+		
+	}
+
+	private void viewNote() {
+		// TODO Auto-generated method stub
+		
 	}
 
 	public void writeNote() {

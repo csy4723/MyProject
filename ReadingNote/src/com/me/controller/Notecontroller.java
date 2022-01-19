@@ -1,8 +1,13 @@
 package com.me.controller;
 
+import java.io.BufferedReader;
+import java.io.BufferedWriter;
+import java.io.File;
+import java.io.FileReader;
+import java.io.FileWriter;
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Calendar;
-import java.util.Date;
 import java.util.Scanner;
 
 import com.me.model.vo.Note;
@@ -51,6 +56,34 @@ public class Notecontroller {
 		
 		
 	}
+	
+	
+	public void saveNote() {
+		
+		File ex = new File("Reading Note.txt");
+		
+		if(ex.exists()) {
+			ex.delete();
+		}
+		
+		File f = new File("Reading Note.txt");
+		
+		try {
+			BufferedWriter bw = new BufferedWriter(new FileWriter(f.getName()));
+		
+			
+		
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
+		
+		
+		
+		
+	}
+	
 	
 
 	

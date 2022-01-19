@@ -1,10 +1,16 @@
 package com.me.model.vo;
 
+import java.io.Serializable;
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.Date;
 
-public class Note {
+public class Note implements Serializable{
+	
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = -3776214811505345618L;
 	private String title;
 	private StringBuffer content; 
 	private Calendar date;

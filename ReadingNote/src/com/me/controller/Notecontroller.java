@@ -47,12 +47,13 @@ public class Notecontroller {
 			}
 
 		}
+		String content = sb.toString();
 
 		String id = openMenu.ID;
 
 		Calendar date = Calendar.getInstance();
 
-		note.add(new Note(title, sb, date, id));// 리스트에 담아줌
+		note.add(new Note(title, content, date, id));// 리스트에 담아줌
 
 		System.out.println(note.get(0).toString());
 
@@ -216,8 +217,10 @@ public class Notecontroller {
 				}
 
 			}
+			
+			String content = sb.toString();
 
-			note.get(index).setContent(sb);
+			note.get(index).setContent(content);
 			sb.delete(0, sb.length());
 			System.out.println("내용을 수정했습니다.");
 			System.out.println("\n" + "=============\n" + note.get(index).toString() + "\n=============");

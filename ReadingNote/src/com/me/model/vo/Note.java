@@ -12,7 +12,7 @@ public class Note implements Serializable{
 	 */
 	private static final long serialVersionUID = -3776214811505345618L;
 	private String title;
-	private StringBuffer content; 
+	private String content; 
 	private Calendar date;
 	private String userId;
 	
@@ -20,7 +20,7 @@ public class Note implements Serializable{
 		// TODO Auto-generated constructor stub
 	}
 
-	public Note(String title, StringBuffer content, Calendar date2, String userId) {
+	public Note(String title, String content, Calendar date2, String userId) {
 		super();
 		this.title = title;
 		this.content = content;
@@ -36,11 +36,11 @@ public class Note implements Serializable{
 		this.title = title;
 	}
 
-	public StringBuffer getContent() {
+	public String getContent() {
 		return content;
 	}
 
-	public void setContent(StringBuffer content) {
+	public void setContent(String content) {
 		this.content = content;
 	}
 

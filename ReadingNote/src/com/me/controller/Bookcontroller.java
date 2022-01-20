@@ -103,7 +103,25 @@ public class Bookcontroller {
 	}
 
 	public void delete() {
-		// TODO Auto-generated method stub
+		System.out.println("삭제할 책을 검색하세요.");
+		String str = sc.nextLine();
+		
+		int i = 0; 
+		for(Book b : book) {
+			
+			if(str.equals(b.getBookTitle())) {
+				System.out.println((i+1)+ "번. "+b.toString());
+				
+			}else if(str.equals((i+1)+ "번. "+b.getSynopsis())) {
+				System.out.println((i+1)+ "번. "+b.toString());
+			}else if(str.equals((i+1)+ "번. "+b.getAuthor())) {
+				System.out.println(b.toString());
+			}else if(str.equals((i+1)+ "번. "+b.getGenre())) {
+				System.out.println(b.toString());
+			}
+		i++;	
+		}
+		
 		
 	}
 

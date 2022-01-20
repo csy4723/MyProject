@@ -79,6 +79,7 @@ public class openMenu {
 				bc.addBook();
 				break;
 			case 3:
+				bc.delete();
 				break;
 			default : 
 				System.out.println("이전 메뉴로 돌아갑니다.");

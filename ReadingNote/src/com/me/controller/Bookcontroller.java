@@ -81,6 +81,8 @@ public class Bookcontroller {
 
 		}
 		
+		String synopsis = sb.toString();
+		
 		
 		System.out.println("작가 : ");
 		String author = sc.nextLine();
@@ -90,9 +92,19 @@ public class Bookcontroller {
 		int gerne = sc.nextInt();
 		sc.nextLine();
 		
+		Book b = new Book(title, synopsis, author, gerne);
 		
+		book.add(b);
+		
+		System.out.println();
+		System.out.println("책이 추가되었습니다. ");
 		
 
+	}
+
+	public void delete() {
+		// TODO Auto-generated method stub
+		
 	}
 
 }

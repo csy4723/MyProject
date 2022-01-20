@@ -25,7 +25,7 @@ public class openMenu {
 			System.out.println("1. 독서 노트 작성하기");
 			System.out.println("2. 작성글 보기");
 			System.out.println("3. 작성글 검색하기(수정/삭제)");
-			System.out.println("4. 책 보기");
+			System.out.println("4. 내가 본 책");
 			System.out.println("5. 책 검색");
 			System.out.println("9. 프로그램 종료");
 			System.out.println("메뉴 입력 :");
@@ -43,6 +43,7 @@ public class openMenu {
 				serchNote();
 				break;
 			case 4:
+				theBook();
 				break;
 			case 5:
 				break;
@@ -56,6 +57,33 @@ public class openMenu {
 			}
 
 		}
+	}
+
+	private void theBook() {
+		while(true) {
+			System.out.println("======");
+			System.out.println("1. 정렬하기 ");
+			System.out.println("2. 추가하기 ");
+			System.out.println("3. 삭제하기 ");
+			System.out.println("외의 키를 누르면 이전 메뉴로 돌아갑니다.");
+			int menu = sc.nextInt();
+			
+			switch(menu) {
+			case 1: 
+				break;
+			case 2:
+				break;
+			case 3:
+				break;
+			default : 
+				System.out.println("이전 메뉴로 돌아갑니다.");
+				break;
+			}
+			
+		}
+		
+		
+		
 	}
 
 	private void serchNote() {

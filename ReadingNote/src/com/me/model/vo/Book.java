@@ -4,13 +4,13 @@ public class Book {
 	private String bookTitle;
 	private String synopsis;
 	private String author;
-	private String genre;
+	private int genre;
 	
 	public Book() {
 		// TODO Auto-generated constructor stub
 	}
 
-	public Book(String bookTitle, String synopsis, String author, String genre) {
+	public Book(String bookTitle, String synopsis, String author, int genre) {
 		super();
 		this.bookTitle = bookTitle;
 		this.synopsis = synopsis;
@@ -42,18 +42,35 @@ public class Book {
 		this.author = author;
 	}
 
-	public String getGenre() {
+	public int getGenre() {
 		return genre;
 	}
 
-	public void setGenre(String genre) {
+	public void setGenre(int genre) {
 		this.genre = genre;
 	}
 
 	
 	@Override
 	public String toString() {
-		return "책 제목 : " + bookTitle + "\n 작가 :" + author + "\n장르 : " + genre + "\n 줄거리 : " + synopsis ;
+		String gen = "";
+		switch(genre) {
+		case 1: 
+			gen = "소설";
+			break;
+		case 2:
+			gen = "시";
+			break;
+		case 3:
+			gen = "인문";
+			break;
+		case 4: 
+			gen = "장르소설";
+			break;
+			
+		}
+		
+		return "책 제목 : " + bookTitle + "\n 작가 :" + author + "\n장르 : " + gen + "\n 줄거리 : " + synopsis ;
 	}
 	
 	

@@ -2,11 +2,14 @@ package com.me.view;
 
 import java.util.Scanner;
 
+import com.me.controller.Bookcontroller;
 import com.me.controller.Notecontroller;
 
 public class openMenu {
 	Scanner sc = new Scanner(System.in);
 	Notecontroller nc = new Notecontroller();
+	Bookcontroller bc = new Bookcontroller();
+	
 	public static String ID;
 
 	public void mainMenu() {
@@ -62,16 +65,18 @@ public class openMenu {
 	private void theBook() {
 		while(true) {
 			System.out.println("======");
-			System.out.println("1. 정렬하기 ");
+			System.out.println("1. 목록 보기 ");
 			System.out.println("2. 추가하기 ");
 			System.out.println("3. 삭제하기 ");
 			System.out.println("외의 키를 누르면 이전 메뉴로 돌아갑니다.");
 			int menu = sc.nextInt();
+			sc.nextLine();
 			
 			switch(menu) {
 			case 1: 
 				break;
 			case 2:
+				bc.addBook();
 				break;
 			case 3:
 				break;
@@ -89,6 +94,7 @@ public class openMenu {
 	private void serchNote() {
 		System.out.println("1. 인덱스로 검색\n2.단어로 검색");
 		int num = sc.nextInt();
+		sc.nextLine();
 
 		switch (num) {
 		case 1:

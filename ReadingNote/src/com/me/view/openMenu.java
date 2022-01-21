@@ -68,6 +68,7 @@ public class openMenu {
 			System.out.println("1. 목록 보기 ");
 			System.out.println("2. 추가하기 ");
 			System.out.println("3. 삭제하기 ");
+			System.out.println("4. 수정하기");
 			System.out.println("외의 키를 누르면 이전 메뉴로 돌아갑니다.");
 			int menu = sc.nextInt();
 			sc.nextLine();
@@ -80,6 +81,9 @@ public class openMenu {
 				break;
 			case 3:
 				bc.delete();
+				break;
+			case 4: 
+				bc.modifyBook();
 				break;
 			default : 
 				System.out.println("이전 메뉴로 돌아갑니다.");

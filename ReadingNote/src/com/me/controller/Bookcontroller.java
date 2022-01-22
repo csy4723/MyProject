@@ -131,6 +131,31 @@ public class Bookcontroller {
 		System.out.println("2. 줄거리 : ");
 		System.out.println("3. 저자 :");
 		System.out.println("4. 장르 :");
+		System.out.println("9. 이전 메뉴로 돌아가기 ");
+		int menu  = sc.nextInt();
+		
+		System.out.println("수정할 내용을 입력하세요 : ");
+		
+		
+		while(true) {
+			
+			switch(menu) {
+			case 1: 
+				break;
+			case 2: 
+				break;
+			case 3: 
+				break;
+			case 4: 
+				break;
+			case 9:
+				System.out.println("이전 메뉴로 돌아갑니다.");
+				break;
+			default : 
+				System.out.println("메뉴를 잘못 입력했습니다.");
+				break;
+			}
+		}
 		
 		
 		

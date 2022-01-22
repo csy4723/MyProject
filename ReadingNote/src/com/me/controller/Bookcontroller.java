@@ -126,7 +126,16 @@ public class Bookcontroller {
 	}
 
 	public void modifyBook() {
-		// TODO Auto-generated method stub
+		System.out.println("수정할 내용을 선택해주세요.");
+		System.out.println("1. 제목 : ");
+		System.out.println("2. 줄거리 : ");
+		System.out.println("3. 저자 :");
+		System.out.println("4. 장르 :");
+		
+		
+		
+		
+		
 		
 	}
 

@@ -126,6 +126,11 @@ public class Bookcontroller {
 	}
 
 	public void modifyBook() {
+		
+		System.out.println("수정할 책의 인덱스를 입력하세요");
+		int bindex = sc.nextInt();
+		sc.nextLine();
+		
 		System.out.println("수정할 내용을 선택해주세요.");
 		System.out.println("1. 제목 : ");
 		System.out.println("2. 줄거리 : ");
@@ -133,15 +138,22 @@ public class Bookcontroller {
 		System.out.println("4. 장르 :");
 		System.out.println("9. 이전 메뉴로 돌아가기 ");
 		int menu  = sc.nextInt();
+		sc.nextLine();
 		
 		System.out.println("수정할 내용을 입력하세요 : ");
+		String str = sc.nextLine();
 		
 		
 		while(true) {
 			
 			switch(menu) {
 			case 1: 
-				break;
+				book.get(bindex).setBookTitle(str);
+				System.out.println(book.get(bindex).toString());
+				System.out.println();
+				System.out.println("책의 내용이 수정되었습니다.");
+				System.out.println();
+				return;
 			case 2: 
 				break;
 			case 3: 
@@ -150,7 +162,7 @@ public class Bookcontroller {
 				break;
 			case 9:
 				System.out.println("이전 메뉴로 돌아갑니다.");
-				break;
+				return;
 			default : 
 				System.out.println("메뉴를 잘못 입력했습니다.");
 				break;

@@ -155,10 +155,32 @@ public class Bookcontroller {
 				System.out.println();
 				return;
 			case 2: 
+				book.get(bindex).setSynopsis(str);
+				System.out.println(book.get(bindex).toString());
+				System.out.println();
+				System.out.println("책의 내용이 수정되었습니다.");
+				System.out.println();
+				
 				break;
 			case 3: 
+				book.get(bindex).setAuthor(str);
+				System.out.println(book.get(bindex).toString());
+				System.out.println();
+				System.out.println("책의 내용이 수정되었습니다.");
+				System.out.println();
 				break;
 			case 4: 
+				System.out.println("장르를 선택하세요");
+				System.out.println("1. 소설 \n2.시\n3.인문\n4.장르소설");
+				int i = sc.nextInt();
+				sc.nextLine();
+				
+				book.get(bindex).setGenre(i);
+				System.out.println();
+				System.out.println(book.get(bindex).toString());
+				System.out.println();
+				System.out.println("책의 내용이 수정되었습니다.");
+				System.out.println();
 				break;
 			case 9:
 				System.out.println("이전 메뉴로 돌아갑니다.");

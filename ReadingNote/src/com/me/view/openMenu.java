@@ -49,6 +49,7 @@ public class openMenu {
 				theBook();
 				break;
 			case 5:
+				searchBook();
 				break;
 			case 9:
 				nc.saveNote();
@@ -60,6 +61,23 @@ public class openMenu {
 			}
 
 		}
+	}
+
+	private void searchBook() {
+		
+		System.out.println("==책 검색 메뉴==");
+		System.out.println("1. 제목");
+		System.out.println("2. 저자");
+		System.out.println("3. 장르");
+		int menu = sc.nextInt();
+		sc.nextLine();
+		
+		System.out.println("검색 단어를 입력하세요");
+		String str = sc.nextLine();
+		
+		bc.searchBook(menu, str);
+		
+		
 	}
 
 	private void theBook() {

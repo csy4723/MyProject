@@ -198,4 +198,28 @@ public class Bookcontroller {
 		
 	}
 
+	public void searchBook(int menu, String str) {
+		
+		
+		switch(menu) {
+		case 1:
+			for(int i = 0 ; i < book.size(); i++) {
+				
+				if(book.get(i).getBookTitle().equals(str)) {
+					System.out.println(book.get(i).toString());
+				}
+				
+			}
+			break;
+		case 2: 
+			break;
+		case 3:
+			break;
+		
+		}
+		
+		
+		
+	}
+
 }

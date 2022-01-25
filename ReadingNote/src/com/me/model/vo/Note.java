@@ -16,6 +16,9 @@ public class Note implements Serializable{
 	private Calendar date;
 	private String userId;
 	//private String bookTitle;
+	//독서기록과 책을 연결할 키를 고안 
+	//오라클이었으면 이거 외래키로 손쉽게 했을텐데 이거 아쉽네. 
+	//인덱스로 하면.. 중간에 데이터가 지워질때 인덱스가 변해서 또 꼬이니까... 고민쓰
 	
 	public Note() {
 		// TODO Auto-generated constructor stub

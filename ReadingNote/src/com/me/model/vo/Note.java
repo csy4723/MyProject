@@ -15,6 +15,7 @@ public class Note implements Serializable{
 	private String content; 
 	private Calendar date;
 	private String userId;
+	//private String bookTitle;
 	
 	public Note() {
 		// TODO Auto-generated constructor stub

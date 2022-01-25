@@ -18,6 +18,10 @@ public class Bookcontroller {
 	StringBuffer sb = new StringBuffer();
 	ArrayList<Book> book = new ArrayList<Book>();
 	Scanner sc = new Scanner(System.in);
+	
+		String[] genre = {"소설", "시", "인문", "장르소설"};
+		
+	
 
 	public void saveBook() {
 
@@ -199,21 +203,54 @@ public class Bookcontroller {
 	}
 
 	public void searchBook(int menu, String str) {
+	
 		
 		
 		switch(menu) {
 		case 1:
+			int j = 0;
 			for(int i = 0 ; i < book.size(); i++) {
 				
 				if(book.get(i).getBookTitle().equals(str)) {
 					System.out.println(book.get(i).toString());
+					j++;
 				}
 				
 			}
+			System.out.println("총 "+ j + "건의 검색결과가 있습니다.");
+
 			break;
 		case 2: 
+			int k = 0;
+			for(int i = 0; i < book.size(); i++) {
+				if(book.get(i).getAuthor().equals(str)) {
+					System.out.println(book.get(i).toString());
+					k++;
+					
+				}
+			}
+			System.out.println("총 "+ k + "건의 검색결과가 있습니다.");
+
 			break;
 		case 3:
+			int i= 0;
+			for(String s : genre) {
+				
+				if(s.equals(str)) {
+					break;
+				}
+				i++;
+			}
+			int d = 0;
+			for(Book b : book) {
+				if(b.getGenre() == i) {
+					System.out.println(b.toString());
+					d++;
+				}
+				
+			}
+			
+			System.out.println("총 "+ d + "건의 검색결과가 있습니다.");
 			break;
 		
 		}

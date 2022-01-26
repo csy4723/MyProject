@@ -5,6 +5,7 @@ public class Book {
 	private String synopsis;
 	private String author;
 	private int genre;
+	private int bookKey;
 	
 	public Book() {
 		// TODO Auto-generated constructor stub
@@ -16,6 +17,14 @@ public class Book {
 		this.synopsis = synopsis;
 		this.author = author;
 		this.genre = genre;
+	}
+
+	public int getBookKey() {
+		return bookKey;
+	}
+
+	public void setBookKey(int bookKey) {
+		this.bookKey = bookKey;
 	}
 
 	public String getBookTitle() {

@@ -15,6 +15,7 @@ public class Note implements Serializable{
 	private String content; 
 	private Calendar date;
 	private String userId;
+	private int noteKey;//랜덤키 부여
 	//private String bookTitle;
 	//독서기록과 책을 연결할 키를 고안 
 	//오라클이었으면 이거 외래키로 손쉽게 했을텐데 이거 아쉽네. 
@@ -30,6 +31,14 @@ public class Note implements Serializable{
 		this.content = content;
 		this.date = date2;
 		this.userId = userId;
+	}
+
+	public int getBookKey() {
+		return noteKey;
+	}
+
+	public void setBookKey(int bookKey) {
+		this.noteKey = bookKey;
 	}
 
 	public String getTitle() {

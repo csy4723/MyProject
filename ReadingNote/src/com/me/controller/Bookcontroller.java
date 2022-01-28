@@ -100,7 +100,7 @@ public class Bookcontroller {
 		System.out.println();
 		System.out.println("책이 추가되었습니다. ");
 
-	} 
+	}  
 
 	public void randomKey() {
 		boolean tf = false;

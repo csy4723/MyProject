@@ -103,18 +103,18 @@ public class Bookcontroller {
 	}  
 
 	public void randomKey() {
-		boolean tf = false;
+		
 
-		while (!tf) {
+		while (true) {
 
 			int rn = (int) (Math.random() * 100) + 1;
 
 			for (Book b : book) {
 
 				if (b.getBookKey() == rn) {
-					tf = true;// 한번이라도 같으면 다시 while문을 돌아야 되는데... 
+					break;// 한번이라도 같으면 다시 while문을 돌아야 되는데... 
 				}
-
+				
 			}
 		}
 

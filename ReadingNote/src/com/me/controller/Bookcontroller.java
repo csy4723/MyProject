@@ -113,7 +113,7 @@ public class Bookcontroller {
 
 				if (b.getBookKey() == rn) {
 					break;// 한번이라도 같으면 다시 while문을 돌아야 되는데... 
-				}
+				} 
 				
 			}
 		}

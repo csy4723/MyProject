@@ -106,7 +106,7 @@ public class Bookcontroller {
 		
 
 		while (true) {
-
+ 
 			int rn = (int) (Math.random() * 100) + 1;
 
 			for (Book b : book) {

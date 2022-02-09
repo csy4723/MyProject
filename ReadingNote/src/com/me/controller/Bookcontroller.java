@@ -109,7 +109,7 @@ public class Bookcontroller {
  
 			int rn = (int) (Math.random() * 100) + 1;
 
-			for (Book b : book) {
+			for (Book b : book) { 
 
 				if (b.getBookKey() == rn) {
 					break;// 한번이라도 같으면 다시 while문을 돌아야 되는데... 
